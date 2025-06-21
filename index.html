@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EduTravel - Home</title>
+<link rel="icon" type="image/png" href="EduTravel.png">
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+     }
+
+    html, body {
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+      color: #4E342E;
+      background-image: url("background (3).jpg");
+      background-color: hsla(0, 0%, 12%, 0.7);
+      background-blend-mode: overlay;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(255, 243, 224, 0.6);
+      z-index: -1;
+    }
+
+    nav {
+      background-color: #6D4C41;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 30px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+
+    .logo-section {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .logo-section img {
+      height: 60px;
+    }
+
+    .logo-section h1 {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      color: white;
+      background-color: transparent;
+      font-weight: bold;
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 5px;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    .nav-links a:hover {
+      background-color: #FF7043;
+      color: white;
+    }
+
+    .hero {
+      padding: 100px 20px 60px;
+      text-align: left;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-content {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 40px;
+      padding: 0 30px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .hero-left {
+      flex: 1;
+      min-width: 400px;
+      padding: 40px;
+      font-size: 1.1em;
+      background: rgba(255, 243, 224, 0.8);
+      color: #4E342E;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    .hero-right {
+      flex: 1;
+      min-width: 400px;
+      text-align: center;
+      padding: 40px;
+    }
+
+    .hero-left h2 {
+      color: #ca7c36;
+      font-size: 2.8em;
+      margin-bottom: 15px;
+    }
+
+    .hero-left p {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 20px;
+    }
+
+    .buttons button {
+      padding: 12px 30px;
+      font-size: 1em;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: bold;
+      background-color: #ca7c36;
+      color: white;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .buttons button:hover {
+      background-color: #6D4C41;
+      color: #FFF3E0;
+      transform: translateY(-2px);
+    }
+
+    #carouselImage {
+      max-width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+      border: 3px solid white;
+    }
+
+    #embedContainer, #insuranceImage, #aboutSection {
+      display: none;
+      max-width: 800px;
+      margin: 40px auto;
+      background: #FAFAFA;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      color: #4E342E;
+    }
+
+    #insuranceImage img, #aboutSection img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .footer-text {
+      text-align: center;
+      padding: 20px 10px;
+      font-weight: bold;
+      color: #FFF3E0;
+      font-size: 1em;
+    }
+
+    @media (max-width: 768px) {
+      .hero-content {
+        flex-direction: column;
+      }
+
+      .buttons {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 10px;
+      }
+
+      .hero-left, .hero-right {
+        padding: 10px 0;
+      }
+
+      .hero-left h2 {
+        font-size: 2em;
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    #heroSection, #embedContainer, #insuranceImage, #aboutSection {
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+  </style>
+    <script src='https://lab-07540-hyd.lab-internal.pega.com/prweb/PRRestService/c11nsvc/v1/pega-embed.js'></script>
+</head>
+<body>
+<nav>
+    <div class="logo-section">
+      <img src="bg image.png" alt="EduTravel">
+      <h1>EduTravel</h1>
+    </div>
+    <div class="nav-links">
+      <a onclick="showHome()">Home</a>
+      
+      <a onclick="showEmbed()">Register</a>
+      <a onclick="redirectToLogin()">Login</a>
+      <a onclick="showAbout()">About</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="heroSection">
+    <div class="hero-content">
+      <div class="hero-left">
+        <h2>Register For Your Student Travel Insurance </h2>
+        <p>Plan smart. Travel safe. Study anywhere with confidence, your journey is protected every step of the way.</p>
+        <div class="buttons">
+          <button onclick="redirectToLogin()">Login</button>
+          <button onclick="showEmbed()">Register</button>
+        </div>
+        
+      </div>
+      <div class="hero-right">
+        <img id="carouselImage" src="" alt="EduTravel">
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Embed Container -->
+  <div id="embedContainer" style="background: rgba(255, 243, 224, 0.8);">
+    <div id="alert" class="alert success">
+      <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+    </div>
+  <pega-embed 
+    id='theEmbed' 
+    action='createCase' 
+    caseTypeID='IIC-IPC-Work-CustomerRegistration' 
+    themeID='pzAries' 
+    casePage='assignment' 
+    assignmentHeader='false' 
+    appAlias='insurance-policies-and-claims' 
+    pegaServerUrl='https://lab-07540-hyd.lab-internal.pega.com/prweb/' 
+    UserIdentifier='Guest@IIC' 
+    Password='cGVnYUAxMjM0NQ==' 
+    autoReauth='true' 
+    authService='pega' 
+    clientId='76014848147760713980' 
+    style='width:100%'>
+  </pega-embed>
+  </div>
+
+  <!-- Image Container -->
+  <div id="insuranceImage">
+    <img src="" alt="EduTravel">
+  </div>
+
+  <!-- About Section -->
+  <div id="aboutSection" style="background: rgba(255, 243, 224, 0.8);">
+    <h2 style="text-align:center; margin-bottom: 20px;">About the Application</h2>
+    <ul style="font-size: 1.1em; line-height: 1.8;">
+      <li>🌍 <b>Tailored for Students:</b> Designed specifically to meet the travel insurance needs of students studying abroad or traveling for academic purposes.</li>
+      <li>🛡️ <b>Comprehensive Coverage:</b> Offers protection for medical emergencies, trip cancellations, lost baggage, and more.</li>
+      <li>📱 <b>Easy Access:</b> Create an account, compare plans, and purchase insurance—all from your mobile or desktop.</li>
+      <li>🔍 <b>Smart Plan Finder:</b> Filter by destination, duration, and coverage type to find the best insurance plan for your journey.</li>
+      <li>📄 <b>Hassle-Free Claims:</b> Submit and track claims online with a user-friendly interface and real-time updates.</li>
+      <li>✈️ <b>Travel with Confidence:</b> Enjoy peace of mind knowing you're protected wherever your academic journey takes you.</li>
+    </ul>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer-text">
+      © 2025 EduTravel. Protecting your academic adventures. Get insured, travel smart, and study with peace of mind.
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    document.getElementById('alert').style.display = 'none';
+
+    let elEmbedding = document.getElementById("theEmbed");
+    elEmbedding.addEventListener("embedprocessingend", handleEmbedReady);
+
+    function handleEmbedReady() {
+      //var RequestID = document.getElementById("theEmbed").getEmbedData(".pyID");
+      var message = "Your registration was successful. The details have also been sent to your email. Please check your inbox for the login credentials. Click on Login to proceed and purchase your student travel insurance with EduTravel Insurance. Thank you for registering with us!";
+      document.getElementById('alert').innerText = message;
+      document.getElementById('theEmbed').style.display = 'none';
+      document.getElementById('alert').style.display = 'block';
+    }
+    function redirectToLogin() {
+      window.location.href = 'https://lab-07540-hyd.lab-internal.pega.com/prweb';
+    }
+    function showSection(sectionId) {
+      const sections = ['heroSection', 'embedContainer', 'insuranceImage', 'aboutSection'];
+      sections.forEach(id => {
+        const el = document.getElementById(id);
+        el.style.display = id === sectionId ? 'block' : 'none';
+        el.style.opacity = id === sectionId ? '1' : '0';
+        el.style.transform = id === sectionId ? 'translateY(0)' : 'translateY(20px)';
+      });
+    }
+    function showEmbed() { showSection('embedContainer'); }
+    function showImage() { showSection('insuranceImage'); }
+    function showHome() { showSection('heroSection'); }
+    function showAbout() { showSection('aboutSection'); }
+
+    // Carousel Logic
+    const images = [
+      "image1.jpg",
+      "image2.jpg"
+    ];
+    let currentImage = 0;
+    const carouselImg = document.getElementById("carouselImage");
+    setInterval(() => {
+      currentImage = (currentImage + 1) % images.length;
+      carouselImg.src = images[currentImage];
+    }, 3000);
+  </script>
+
+</body>
+</html>

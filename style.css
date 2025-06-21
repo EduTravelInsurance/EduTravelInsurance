@@ -1,0 +1,57 @@
+html, body {
+  font-family: 'Segoe UI', sans-serif;
+  color: #4E342E; /* dark brown text */
+  background-image: url("..."); /* keep same bg */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+body::before {
+  background-color: rgba(255, 243, 224, 0.6); /* warm overlay */
+}
+
+nav {
+  background-color: #6D4C41; /* deep brown */
+  color: white;
+}
+
+.nav-links a {
+  color: white;
+  background-color: transparent;
+}
+
+.nav-links a:hover {
+  background-color: #FF7043; /* sunset orange */
+  color: white;
+}
+
+.hero-left {
+  background: rgba(255, 243, 224, 0.8); /* light warm overlay */
+  color: #4E342E;
+}
+
+.hero-left h2 {
+  color: #BF360C; /* bold burnt orange */
+}
+
+.buttons button {
+  background-color: #FF7043; /* main CTA button */
+  color: white;
+}
+
+.buttons button:hover {
+  background-color: #6D4C41;
+  color: #FFF3E0;
+}
+
+#embedContainer, #insuranceImage, #aboutSection {
+  background: #FAFAFA; /* very light grey */
+  color: #4E342E;
+}
+
+.footer-text {
+  background-color: #4E342E;
+  color: #FFF3E0;
+}
